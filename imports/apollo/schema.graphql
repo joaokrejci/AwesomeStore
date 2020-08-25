@@ -1,0 +1,33 @@
+type Product {
+    _id: ID!
+    name: String
+    image: String
+    description: String
+    price: Float!
+}
+
+input ProductInput {    
+    name: String
+    image: String
+    description: String
+    price: Float
+}
+
+type User {
+    _id: ID!
+    username: String
+    cart: [ID]
+}
+
+type Query {
+    product(id: ID!): Product
+    products: [Product]
+    cart: [Product]
+}
+
+type Mutation {
+    insertProduct(input: ProductInput!): Product
+    insertIntoCart(id: ID!): [Product]
+    removeFromCart(id: ID!): [Product]
+    emptyCart: [Product]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "awesome-shop",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.1.1",
+    "@apollo/react-hooks": "^4.0.0",
+    "@babel/runtime": "^7.10.5",
+    "apollo-boost": "^0.4.9",
+    "apollo-server-express": "^2.16.1",
+    "base64-arraybuffer": "^0.2.0",
+    "bcrypt": "^5.0.0",
+    "graphql": "^15.3.0",
+    "meteor-node-stubs": "^1.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hooks": "^1.0.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}
